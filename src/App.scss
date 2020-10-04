@@ -13,7 +13,7 @@ body {
 .nav {
     display: flex;
     flex-direction: column;
-    background-color: #062436;
+    background-color: #003B72;
     width: 190px;
     height: 100vh;
     float: left;
@@ -37,7 +37,6 @@ body {
         letter-spacing: 0em;
         align-items: center;
         height: 55px;
-        // color: #fff;
         svg {
             padding: 0 14px 0 20px;
         }
@@ -101,9 +100,9 @@ body {
 .wrapper {
     display: flex;
     // background-color: #fff;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     max-height: inherit;
-    padding: 50px;
+    padding: 20px;
     flex-direction: column;
     width: 100%;
 }
@@ -142,9 +141,9 @@ nav ul {
         }
         color: #fff;
         &:hover {
-            color: #36BDF7;
+            color: #50CAFF;
             svg {
-                fill: #36BDF7;
+                fill: #50CAFF;
             }
         }
     }
@@ -164,16 +163,8 @@ a {
     ul {
         svg {
             margin: 0 10px;
-            // fill: #fff;
-            // stroke: #ffffff;
         }
     }
-}
-
-.subtitle {
-    font-size: 1em;
-    font-weight: 500;
-    margin-bottom: 10px;
 }
 
 .title {
@@ -201,78 +192,9 @@ hr.rounded {
     }
 }
 
-.card {
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-$details-padding: 1em;
-details {
-    font-size: 1rem;
-    // box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    width: 100%;
-    background: #ffffff;
-    // border-radius: 8px;
-    position: relative;
-    .summary-title {
-        user-select: none;
-    }
-    &:hover {
-        cursor: pointer;
-    }
-    &[open] {
-        background-color: #F3FCFF;
-        .summary-chevron-down {
-            background: #F3FCFF
-        }
-    }
-    .summary-content {
-        border-top: 1px solid #e2e8f0;
-        cursor: default;
-        padding: $details-padding;
-        font-weight: 300;
-        line-height: 1.5;
-        header {
-            figure {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    summary {
-        padding: $details-padding;
-        &:focus {
-            outline: none;
-        }
-        &:hover .summary-chevron-up svg {
-            opacity: 1;
-        }
-    }
-    .summary-chevron-up svg {
-        opacity: 0.5;
-    }
-    .summary-chevron-up,
-    .summary-chevron-down {
-        pointer-events: none;
-        position: absolute;
-        top: 0.75em;
-        right: $details-padding;
-        background: #fff;
-        svg {
-            display: block;
-        }
-    }
-    summary::-webkit-details-marker {
-        display: none;
-    }
-}
-
-.logo:hover {
-    .icon {
-        fill: #36BDF7;
-    }
+.appointments,
+.el-card {
+    padding-left: 50px;
 }
 
 .active {

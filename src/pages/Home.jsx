@@ -3,10 +3,13 @@ import React from 'react'
 import {
     Support,
     Profile,
-    VPS,Card,
+    VPS,
+    Card,
     Domains,
     ContentHeader,
-    Maintance} from '../components'
+    Maintance,
+    E_Card
+} from '../components'
 
 
 import {
@@ -15,7 +18,7 @@ import {
     Route,
     Link,
     NavLink
-  } from "react-router-dom";
+} from "react-router-dom";
 
 
 

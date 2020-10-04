@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card2'
+import Card from './Card'
 import {
     BrowserRouter as Router,
     Switch,

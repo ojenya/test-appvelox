@@ -3,12 +3,15 @@
 }
 
 .card {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
     width: 475px;
     height: 175px;
     background-color: #fff;
     box-shadow: 0px 0px 5px #EBE7FF;
     border-radius: 5px;
-    margin: 15px 20px;
+    margin: 15px 20px 30px 0px;
     .card-desc {
         width: 75%;
         display: flex;
@@ -71,5 +74,85 @@
     a {
         color: #50CAFF;
         text-decoration: underline;
+    }
+}
+
+.e_card {
+    // margin: 15px 20px;
+    margin: 15px 20px 0px 0px;
+    display: flex;
+    width: 540px;
+    height: 185px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #EBE7FF;
+    border-radius: 5px;
+    .e_card-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 133px;
+        svg {
+            fill: #EBE7FF;
+        }
+    }
+    .e_card-desc {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        // padding-left: 25px;
+        width: 407px;
+        .hr {
+            content: "";
+            height: 2px;
+            background-color: #EBE7FF;
+            margin: 10px 0;
+            width: 335px;
+        }
+        ul {
+            width: 310px;
+            padding-left: 20px;
+            list-style-type: disc;
+            li {
+                color: #EBE7FF;
+                // color: #50CAFF;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                span {
+                    color: #000
+                }
+            }
+        }
+        .e_card-title {
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    &:hover {
+        .e_card-desc li {
+            color: #50CAFF;
+        }
+        .e_card-desc .hr {
+            background-color: #50CAFF;
+        }
+        .e_card-logo {
+            background-color: #50CAFF;
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+        box-shadow: 0px 0px 5px #50CAFF;
     }
 }

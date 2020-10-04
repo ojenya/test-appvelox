@@ -1,5 +1,8 @@
 import React from 'react'
+import { E_Card } from '.'
 import Card from './Card'
+import ECard from './E_Card'
+
 
 const Profile = (props) => {
     return (
@@ -11,6 +14,7 @@ const Profile = (props) => {
 
                 <div className="separator"></div>
                 <div className="el-card title">Электронная карта</div>
+                <E_Card/>
             </div>
         </div>
         </>
