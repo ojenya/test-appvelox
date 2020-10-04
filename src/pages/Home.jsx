@@ -1,15 +1,21 @@
 import React from 'react'
 
 import {
-    Support,
-    Profile,
-    VPS,
-    Card,
-    Domains,
     ContentHeader,
-    Maintance,
-    E_Card
-} from '../components'
+    Card,
+    E_Card,
+} 
+from '../components'
+
+
+import Messages from './Messages';
+import Maintance from './Maintance';
+import Profile from './Profile';
+import Test from './Test';
+import Useful from './Useful';
+import Doctors from './Doctors';
+
+
 
 
 import {
@@ -18,7 +24,8 @@ import {
     Route,
     Link,
     NavLink
-} from "react-router-dom";
+} 
+from "react-router-dom";
 
 
 
@@ -101,16 +108,16 @@ const Home = (props) => {
                             <Profile list={list}/>
                         </Route>
                         <Route path="/doctors">
-                            <VPS list={list}/>
+                            <Doctors list={list}/>
                         </Route>
                         <Route path="/messages">
-                            <Domains list={list}/>
+                            <Messages list={list}/>
                         </Route>
                         <Route path="/test">
-                            <Support list={list}/>
+                            <Test list={list}/>
                         </Route>
                         <Route path="/useful">
-                            <Support list={list}/>
+                            <Useful list={list}/>
                         </Route>
                         <Route path="/">
                             <Maintance list={list}/>

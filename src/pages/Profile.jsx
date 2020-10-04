@@ -1,7 +1,6 @@
 import React from 'react'
-import { E_Card } from '.'
-import Card from './Card'
-import ECard from './E_Card'
+import Card from '../components/Card'
+import E_Card from '../components/E_Card'
 
 
 const Profile = (props) => {

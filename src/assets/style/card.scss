@@ -147,6 +147,8 @@
         }
         .e_card-logo {
             background-color: #50CAFF;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
             svg {
                 path {
                     fill: #fff;

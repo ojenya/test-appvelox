@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-const VPS = (props) => {
+const Test = (props) => {
     return (
         <>
             <div className="container-content">
                     <div className="wrapper">
-                        <div className="subtitle">VPS</div>
-                        <div className="title">VPS</div>
-                        <div className="separator"></div>
+                        <div className="subtitle">Тестирование</div>
+                        <div className="title">Тестирование</div>
+
                     </div>
             </div>    
         </>
@@ -17,4 +17,4 @@ const VPS = (props) => {
 
 
 
-export default VPS
+export default Test
