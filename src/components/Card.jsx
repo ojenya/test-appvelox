@@ -1,54 +1,45 @@
 import React from 'react'
-import doc from '../assets/img/doc.png'
 import '../assets/style/card.scss'
+import CardAppointment from './CardAppointment'
+import Profile_ext from '../pages/Profile_ext'
 
-function Card(props) {
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+} 
+from "react-router-dom";
+
+function Card({data}) {
+
+   const cutList = data.slice(0,2);
+
+   
     return (
         <>  
-        <div className="cards">
-                <div className="card">
-                    <div className="card-desc">
-                        <div className="date">Понедельник 15.06.20 | 15:30 </div>
-                        <div className="depart">СПБ ГБУЗ "Городская поликлиника №25", пр. Солидарности, д. 1, к. 1, лит. А</div>
-                        <div className="doc">
-                            <img src={doc} alt="doc"/>
-                            <div className="info">
-                                <span className="fio">Малушко Т. Н.</span>
-                                <span className="doc-depart">Хирургия</span>
-                            </div>
-                        </div>
-                    </div>
+        <Router>
+            <div className="cards">
 
-                    <div className="card-btn">
-                        <button> <a href=""> Отменить</a></button>
-                    </div>
-                </div>
+                {cutList ? cutList.map((cardInfo,i)=> <CardAppointment key={i} data={cardInfo} />):<div>Loading...</div>}
+                
+                    <div className="more">
+                        Еще {data.length - 2} записи <br/>
+                       
+                        <Link to="/profile_details">
+                            Подробнее
+                        </Link>
 
-                <div className="card">
-                    <div className="card-desc">
-                        <div className="date">Понедельник 15.06.20 | 15:30 </div>
-                        <div className="depart">СПБ ГБУЗ "Городская поликлиника №25", пр. Солидарности, д. 1, к. 1, лит. А</div>
-                        <div className="doc">
-                            <img src={doc} alt="doc"/>
-                            <div className="info">
-                                <span className="fio">Малушко Т. Н.</span>
-                                <span className="doc-depart">Хирургия</span>
-                            </div>
-                        </div>
                     </div>
-
-                    <div className="card-btn">
-                        <button> <a href=""> Отменить</a></button>
-                    </div>
-                </div>
-
-                <div className="more">
-                Еще 3 записи <br/>
-               <a href="">Подробнее</a>
-                </div>
             </div>
+            <Switch>
+            {/* <Route exact path='/profile_details' render={() => <Profile_ext />}/> */}
 
-            
+                <Route exact path="/profile_details">
+                    <Profile_ext/>
+                </Route>
+            </Switch>
+        </Router>
         </>
     )
 }

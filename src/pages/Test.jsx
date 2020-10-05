@@ -6,7 +6,6 @@ const Test = (props) => {
         <>
             <div className="container-content">
                     <div className="wrapper">
-                        <div className="subtitle">Тестирование</div>
                         <div className="title">Тестирование</div>
 
                     </div>

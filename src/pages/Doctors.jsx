@@ -6,7 +6,6 @@ const Doctors = (props) => {
         <>
         <div className="container-content">
             <div className="wrapper">
-                <div className="subtitle">Врачи и клиники</div>
                 <div className="title">Врачи и клиники</div>
 
             </div>

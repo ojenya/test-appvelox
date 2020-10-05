@@ -6,7 +6,7 @@
     min-height: 100px;
     display: flex;
     align-items: center;
-    width: 475px;
+    width: 485px;
     height: 175px;
     background-color: #fff;
     box-shadow: 0px 0px 5px #EBE7FF;
@@ -27,8 +27,15 @@
             display: flex;
             flex-direction: row;
             margin-top: 10px;
-            img {
-                border-radius: 50%;
+            .doc-photo {
+                width: 60px;
+                height: 60px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                    border-radius: 50%;
+                }
             }
             .info {
                 display: flex;
@@ -51,6 +58,13 @@
             border-radius: 5px;
             height: 40px;
             border: none;
+            &:hover {
+                background: #fff;
+                border: 1px solid #7761FF;
+                a {
+                    color: #7761FF;
+                }
+            }
             a {
                 color: #fff;
                 font-size: 14px;

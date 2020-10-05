@@ -6,9 +6,9 @@ const Useful = (props) => {
         <>
             <div className="container-content">
                     <div className="wrapper">
-                        <div className="subtitle">Полезно знать</div>
+
                         <div className="title">Полезно знать</div>
-                        <div className="separator"></div>
+
                     </div>
             </div>    
         </>

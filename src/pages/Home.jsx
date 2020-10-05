@@ -1,9 +1,7 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 import {
-    ContentHeader,
-    Card,
-    E_Card,
+    ContentHeader
 } 
 from '../components'
 
@@ -14,6 +12,8 @@ import Profile from './Profile';
 import Test from './Test';
 import Useful from './Useful';
 import Doctors from './Doctors';
+import Profile_ext from './Profile_ext';
+
 
 
 
@@ -38,11 +38,20 @@ import {ReactComponent as HelpSVG} from  '../assets/img/help.svg'
 import {ReactComponent as LogoSVG} from  '../assets/img/logo.svg'
 
 
-import logo from '../assets/img/logo.png'
+// import logo from '../assets/img/logo.png'
 
 const Home = (props) => {
 
-    const list = props.list
+    const [list,setList] = useState([])
+
+    useEffect (()=>{
+      fetch('https://appvelox.herokuapp.com/appointment/')
+      .then(response => response.json())
+      .then(json => setList(json))
+              
+    },[])
+    
+
     return (
         <>
         <Router>
@@ -96,10 +105,14 @@ const Home = (props) => {
                             <HelpSVG/>
                             Помощь
                         </NavLink>
-                        <img src={logo} alt="appvelox" />
+                        {/* <img src={logo} alt="appvelox" /> */}
+                        <LogoSVG/>
                         </div>
                     </div>
                 </nav>
+
+
+
 
                 <div className="conent">
                     <ContentHeader/>
@@ -108,19 +121,25 @@ const Home = (props) => {
                             <Profile list={list}/>
                         </Route>
                         <Route path="/doctors">
-                            <Doctors list={list}/>
+                            <Doctors />
                         </Route>
                         <Route path="/messages">
-                            <Messages list={list}/>
+                            <Messages />
                         </Route>
                         <Route path="/test">
-                            <Test list={list}/>
+                            <Test />
                         </Route>
                         <Route path="/useful">
-                            <Useful list={list}/>
+                            <Useful />
+                        </Route>
+
+                        
+                            
+                        <Route exact path="/profile_details">
+                            <Profile_ext/>
                         </Route>
                         <Route path="/">
-                            <Maintance list={list}/>
+                            <Maintance />
                         </Route>
                         
                     </Switch>

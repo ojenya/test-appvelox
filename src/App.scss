@@ -209,26 +209,36 @@ hr.rounded {
     }
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: left;
-    img {
-        height: 20px;
-        margin: 4px 56px 16px 20px;
-    }
-    a {
-        color: #fff;
-        svg {
-            fill: #fff;
-        }
-    }
-}
-
 .aside {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: left;
+        #logo {
+            height: 20px;
+            margin: 4px 56px 16px 20px;
+            .cls-1 {
+                fill: #fff;
+            }
+            .cls-2 {
+                fill: #70c5e1;
+            }
+            &:hover {
+                .cls-1 {
+                    fill: #70c5e1;
+                }
+            }
+        }
+        a {
+            color: #fff;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
 }
