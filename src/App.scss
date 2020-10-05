@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import './assets/style/card.scss';
+@import './assets/style/profile_ext.scss';
 body {
     margin: 0;
     background-color: #F7FAFB;
@@ -101,6 +103,7 @@ body {
     display: flex;
     // background-color: #fff;
     // overflow-x: scroll;
+    // overflow: hidden;
     max-height: inherit;
     padding: 20px;
     flex-direction: column;

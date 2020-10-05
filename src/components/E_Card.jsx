@@ -33,8 +33,9 @@ function ECard(props) {
                         <div className="e_card-title">Результаты анализов</div>
                         <div className="hr"></div>
                         <ul>
-                            <li><span>Вы можете узнать здесь результаты своих анализов</span></li>
-              
+                            <li>
+                                <span>Вы можете узнать здесь результаты своих анализов</span>
+                            </li>
                         </ul>
 
                     </div>

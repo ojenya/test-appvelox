@@ -1,13 +1,8 @@
 import React from 'react'
-import '../assets/style/card.scss'
 import CardAppointment from './CardAppointment'
-import Profile_ext from '../pages/Profile_ext'
 
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
+    Link
 } 
 from "react-router-dom";
 
@@ -18,10 +13,15 @@ function Card({data}) {
    
     return (
         <>  
-        <Router>
             <div className="cards">
 
-                {cutList ? cutList.map((cardInfo,i)=> <CardAppointment key={i} data={cardInfo} />):<div>Loading...</div>}
+                {
+                cutList ? cutList.map(
+                (cardInfo,i)=> 
+                <CardAppointment key={i} data={cardInfo} />
+                ):
+                <div>Loading...</div>
+                }
                 
                     <div className="more">
                         Еще {data.length - 2} записи <br/>
@@ -32,14 +32,7 @@ function Card({data}) {
 
                     </div>
             </div>
-            <Switch>
-            {/* <Route exact path='/profile_details' render={() => <Profile_ext />}/> */}
-
-                <Route exact path="/profile_details">
-                    <Profile_ext/>
-                </Route>
-            </Switch>
-        </Router>
+  
         </>
     )
 }

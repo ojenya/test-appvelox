@@ -1,0 +1,24 @@
+.profile_ext-nav {
+    a {
+        display: flex;
+        padding-left: 25px;
+        .title {
+            padding-left: 10px;
+        }
+    }
+}
+
+.profile_ext-content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    .list {
+        background-color: red;
+        min-width: 515px;
+        max-width: 70%;
+    }
+    .calendar {
+        width: 100%;
+        background-color: wheat;
+    }
+}

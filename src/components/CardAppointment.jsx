@@ -3,7 +3,7 @@ import React from 'react'
 import '../assets/style/card.scss'
 
 function CardAppointment({data}) {
-    console.log(data)
+    // console.log(data)
     const {date,
         depart,
         doc_depart,

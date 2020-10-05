@@ -1,10 +1,17 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Card from '../components/Card'
 import E_Card from '../components/E_Card'
 
 
-const Profile = ({list}) => {
+const Profile = () => {
+    const [list,setList] = useState([])
 
+    useEffect (()=>{
+      fetch('https://appvelox.herokuapp.com/appointment/')
+      .then(response => response.json())
+      .then(json => setList(json))
+              
+    },[])
     return (
         <>
         <div className="container-content">
