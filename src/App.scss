@@ -133,12 +133,19 @@ nav ul {
         letter-spacing: 0em;
         text-align: center;
         button {
+            color: #fff;
+            font-weight: 600;
             background: #7761FF;
             border-radius: 5px;
             border: none;
             margin: 20px 20px;
             height: 40px;
             width: 100%;
+            &:hover {
+                border: 1px solid #7761FF;
+                background-color: #fff;
+                color: #7761FF;
+            }
         }
         svg {
             fill: #fff;
@@ -246,4 +253,9 @@ hr.rounded {
             }
         }
     }
+}
+
+.more {
+    width: 300px;
+    margin-right: 50px;
 }

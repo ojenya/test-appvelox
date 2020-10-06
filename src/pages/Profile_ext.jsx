@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { NavLink } from 'react-router-dom'
 
-import Card from '../components/Card'
 import {ReactComponent as ArrowLeft} from '../assets/img/arrow-left.svg'
 import CardAppointment from '../components/CardAppointment'
 import Calendar from '../components/Calendar'
@@ -49,7 +48,7 @@ const ProfileExt = () => {
                 } 
                     </div>
                     <div className="calendar">
-                    <Calendar/>
+                    <Calendar list={list}/>
 
                     </div>
                 </div>

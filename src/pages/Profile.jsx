@@ -18,8 +18,7 @@ const Profile = () => {
             <div className="wrapper">
                 <div className="appointments title">Записи на прием</div>
                 <Card data={list}/>
-
-                <div className="separator"></div>
+                
                 <div className="el-card title">Электронная карта</div>
                 <E_Card/>
             </div>
