@@ -22,14 +22,13 @@ function Card({data}) {
                 ):
                 <div>Loading...</div>
                 }
-                
                     <div className="more">
                         Еще {data.length - 2} записи <br/>
                        
                         <Link to="/profile_details">
                             Подробнее
                         </Link>
-
+                    {/* <div calendar></div> */}
                     </div>
             </div>
   

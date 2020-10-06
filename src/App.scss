@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 @import './assets/style/card.scss';
 @import './assets/style/profile_ext.scss';
+@import './assets/style/calendar.scss';
 body {
     margin: 0;
     background-color: #F7FAFB;
@@ -198,6 +199,7 @@ hr.rounded {
 .appointments,
 .el-card {
     padding-left: 50px;
+    margin-bottom: 18px;
 }
 
 .active {

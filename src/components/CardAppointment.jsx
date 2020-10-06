@@ -1,5 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
+import Moment from 'react-moment';
+import 'moment-timezone';
+import 'moment/locale/ru';
 import '../assets/style/card.scss'
 
 function CardAppointment({data}) {
@@ -9,13 +12,25 @@ function CardAppointment({data}) {
         doc_depart,
         imageUrl,
         name} = data
+
+        const unixTimestamp = date
+       
+ 
+
+
     return (
         <>  
         {data? 
         (<div className="card">
                 <div className="card-desc">
-        <div className="date">{date} </div>
-                    <div className="depart">{depart}</div>
+                    <div className="date"> 
+                        <Moment format="dddd, D.MM.YYYY | H:mm" locale="ru" unix>{unixTimestamp}</Moment>
+                    </div>
+
+                    <div className="depart">
+                        {depart}
+                    </div>
+                    
                     <div className="doc">
                         <div className="doc-photo">
                             <img src={imageUrl} alt="doc"/>
@@ -33,7 +48,7 @@ function CardAppointment({data}) {
             </div>
         ):
         null}
-
+     
         
     </>)
 }

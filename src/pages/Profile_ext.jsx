@@ -1,8 +1,11 @@
 import React,{useEffect,useState} from 'react'
 import { NavLink } from 'react-router-dom'
+
 import Card from '../components/Card'
 import {ReactComponent as ArrowLeft} from '../assets/img/arrow-left.svg'
 import CardAppointment from '../components/CardAppointment'
+import Calendar from '../components/Calendar'
+
 
 
 const ProfileExt = () => {
@@ -14,6 +17,8 @@ const ProfileExt = () => {
       .then(json => setList(json))
               
     },[])
+
+
 
     return (
         <>
@@ -35,19 +40,20 @@ const ProfileExt = () => {
 
                 <div className="profile_ext-content">
                     <div className="list">
-                        
-                    </div>
-                    <div className="calendar">
-                        calendar
-                    </div>
-                </div>
-                {
+                        {
                 list ? list.map(
                 (cardInfo,i)=> 
                 <CardAppointment key={i} data={cardInfo} />
                 ):
                 <div>Loading...</div>
-                }
+                } 
+                    </div>
+                    <div className="calendar">
+                    <Calendar/>
+
+                    </div>
+                </div>
+               
 
             
             </div>

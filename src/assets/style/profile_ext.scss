@@ -11,14 +11,34 @@
 .profile_ext-content {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    margin-top: 10px;
     .list {
-        background-color: red;
+        overflow-x: hidden;
+        height: 85vh;
         min-width: 515px;
         max-width: 70%;
+        margin-right: 40px;
     }
     .calendar {
         width: 100%;
-        background-color: wheat;
+        border: 5px;
+    }
+}
+
+// CUSTOM SCROLL
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #003B72;
+    border-radius: 10px;
+    &:hover {
+        background: #32516e;
     }
 }
