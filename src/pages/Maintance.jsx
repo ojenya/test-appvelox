@@ -32,6 +32,8 @@ const Maintance = (props) => {
                             Фреймворк: React(можно использовать любые доп. библиотеки)                  
                            <br/><br/>
                            Срок реализации не более 1 недели.
+                           <br/><br/>
+                            Ссылка на <a href="https://github.com/ojenya/test-appvelox" target="_blank">github</a>.
                         </div>
                     </div>
             </div>    
