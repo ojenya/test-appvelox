@@ -4,15 +4,12 @@ import Calendar from 'react-calendar';
 const disabledDates = [
 ];
 
-
 class CalendarComp extends Component {
   state = {
     date: new Date(),
 
   }
  
-  
-  
   onChange = date => this.setState({ date })
  
   render() {
@@ -31,12 +28,7 @@ class CalendarComp extends Component {
         event.push(dateObject)
 
       }
-      
-      
-
-      console.log(event)
     }
-    // console.log(event[0])
    
     return (
       <div>

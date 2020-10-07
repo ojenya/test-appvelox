@@ -1,5 +1,9 @@
 .cards {
     display: flex;
+    .more {
+        width: 300px;
+        margin-right: 50px;
+    }
 }
 
 .card {

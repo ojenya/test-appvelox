@@ -28,7 +28,6 @@ function Card({data}) {
                         <Link to="/profile_details">
                             Подробнее
                         </Link>
-                    {/* <div calendar></div> */}
                     </div>
             </div>
   

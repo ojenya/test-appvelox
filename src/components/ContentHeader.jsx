@@ -1,16 +1,12 @@
 import React from 'react'
-// import search from '../assets/img/search.svg'
-// import notification from '../assets/img/notification.svg'
-// import eye from '../assets/img/eye.svg'
 
-// import circle from '../assets/img/circle.svg'
-// import arrow from '../assets/img/arrow-down.svg'
 import {ReactComponent as Search} from  '../assets/img/search.svg'
 import {ReactComponent as Notification} from  '../assets/img/notification.svg'
 import {ReactComponent as Eye} from  '../assets/img/eye.svg'
 import {ReactComponent as Circle} from  '../assets/img/circle.svg'
 import {ReactComponent as Arrow} from  '../assets/img/arrow-down.svg'
 
+import userImg from '../assets/img/doc.png' 
 
 
 const Contentheader = (props) => {
@@ -27,7 +23,7 @@ const Contentheader = (props) => {
                     <Search/>
                     <Notification/>
                     <Eye/>
-                    <Circle/>
+                    <Circle />
                     <Arrow/>
                 </ul>
             </div>  

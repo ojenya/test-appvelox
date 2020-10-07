@@ -71,16 +71,17 @@ ReactDOM.render(
                 </ul>
              
                 <div className="footer">
+                    <ul>
                 <NavLink to="/help">
                     <HelpSVG/>
                     Помощь
                 </NavLink>
-
+                </ul>
                 <LogoSVG/>
                 </div>
             </div>
         </nav>
-        <div className="conent">
+        <div className="content">
             <ContentHeader/>
         </div>
         <Routes/>

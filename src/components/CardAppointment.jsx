@@ -6,7 +6,6 @@ import 'moment/locale/ru';
 import '../assets/style/card.scss'
 
 function CardAppointment({data}) {
-    // console.log(data)
     const {date,
         depart,
         doc_depart,
@@ -14,10 +13,7 @@ function CardAppointment({data}) {
         name} = data
 
         const unixTimestamp = date
-       
- 
-
-
+        
     return (
         <>  
         {data? 
